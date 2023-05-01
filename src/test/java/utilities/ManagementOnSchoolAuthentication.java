@@ -1,4 +1,4 @@
-package utils;
+package utilities;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -11,9 +11,9 @@ public class ManagementOnSchoolAuthentication {
     }
 
     public static String generateToken(){
-        String postBody = "{ \"password\": \"485424698\",  \"username\": \"Admin\"\n" +"}";
+        String postBody = "{ \"password\": \"12345678\",  \"username\": \"AdminB103\"\n" +"}";
 
-        Response response = given().contentType(ContentType.JSON).body(postBody).post("http://209.38.244.227/auth/login");
+        Response response = given().contentType(ContentType.JSON).body(postBody).post("http://164.92.252.42:8080/auth/login");
 
        return response.jsonPath().getString("token");
 

@@ -2,14 +2,16 @@ package stepdefinitions;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+
 import com.google.gson.Gson;
 import io.cucumber.java.en.*;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.codehaus.jackson.map.ObjectMapper;
 import pojos.ObjectPojo;
 import pojos.TeacherPojo;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,7 +40,7 @@ public class GetTeacherByIdStepDefs {
 
     }
     @Then("validate body")
-    public void validate_body() throws JsonProcessingException {
+    public void validate_body() throws IOException {
 
         //1. Validation:
         response.then().statusCode(200).

@@ -5,7 +5,7 @@ import static base_urls.ManagementOnSchoolBaseUrl.setUp;
 
 public class Hooks {
 
-    @Before("@ApiGetTeacher")
+    @Before("@US05")
     public void before(){
         setUp();
     }

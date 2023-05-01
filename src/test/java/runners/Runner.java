@@ -8,9 +8,10 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-        tags = "@ApiGetTeacher",
+        tags = "@US06",
         glue = {"stepdefinitions","hooks"},
-        features = "./src/test/resources/features"
+        features = "./src/test/resources/features",
+        dryRun = true//Seneryonun adımlarını kontrol eder ve çalıştığını görürüz
 
 
 )
